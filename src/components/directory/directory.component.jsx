@@ -18,13 +18,13 @@ class Directory extends React.Component {
                   title: 'oral care',
                   imageUrl: "/datascrape-e/HomePage/oral.jpeg",
                   id: 2,
-                  linkUrl: 'shop/jackets'
+                  linkUrl: 'shop/oral'
                 },
                 {
-                  title: 'pain management',
+                  title: 'pain relief',
                   imageUrl: "/datascrape-e/HomePage/pain.png",
                   id: 3,
-                  linkUrl: 'shop/sneakers'
+                  linkUrl: 'shop/pain'
                 },
                 {
                   title: 'diagnostics',
