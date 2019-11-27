@@ -4,7 +4,7 @@ import ShopPage from './pages/shop/shop.component.jsx';
 import Header from './components/header/header.component';
 import Sign from './pages/sign/sign.component';
 import {Switch, Route} from 'react-router-dom';
-import {auth} from '../src/firebase/filebase.utils';
+import {auth ,createUserProfileDocument} from '../src/firebase/filebase.utils';
 import './App.css';
 
 class App extends React.Component {
@@ -18,13 +18,27 @@ class App extends React.Component {
   unsubscribeAuth = null;
 
   componentDidMount() { // fetching credentials
-    this.unsubscribeAuth= auth.onAuthStateChanged( user => { // authState built in method in firebase
-      this.setState({
-        currentUser: user // when user state changes
-      })
-      console.log(user)
-    })
-  }
+    this.unsubscribeAuth= auth.onAuthStateChanged( async userAuth => { // authState built in method in firebase
+      
+      // createUserProfileDocument(userAuth);
+      if (userAuth) {
+        const userRef = await createUserProfileDocument(userAuth); // checks to see if database has updated at reference (userRef)
+          
+        userRef.onSnapshot(snapshot => {
+            
+            this.setState({
+              currentUser: {
+                id: snapshot.id,
+                ...snapshot.data()
+              }
+            })
+          }) // returns snapShot object with data related to new and old users
+          // must use .data method to see snapshot data
+      }
+    
+  });
+}
+
 
   componentWillUnmount() {
     this.unsubscribeAuth()
@@ -33,7 +47,7 @@ class App extends React.Component {
   render(){
     return (
       <div>
-        <Header currentUser={this.state.currentUser}/>
+        <Header currentUser={this.state.currentUser} />
         <Switch>
           <Route exact path= '/' component={HomePage} /> 
           <Route path= '/shop' component={ShopPage} />
