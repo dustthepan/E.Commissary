@@ -2,7 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/firestore'; 
 import 'firebase/auth';
 
-const config = //INSERT CDN HERE
+const config = //INSERT HERE
 
   firebase.initializeApp(config); // starts firebase
 
@@ -15,16 +15,16 @@ const config = //INSERT CDN HERE
   
   export const signInGoogle = () => auth.signInWithPopup(provider);
 
-  // checks to see if user is already in db
+  // checks to see if user is already in db and creates one if not
   // takes user object when authenticated, and stores it into our database
   export const createUserProfileDocument = async (userAuth, additionalData) => {
       
-    if (!userAuth) return;
+    if (!userAuth) return; // if there is no user credentials, exit from function
 
+    //if it does exist query inside doc
    const userRef = firestore.doc(`users/${userAuth.uid}`);
    
-
-   const snapShot = await userRef.get();
+    const snapShot = await userRef.get(); // grab data if ser exists
 
    if (!snapShot.exists){
       

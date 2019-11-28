@@ -9,7 +9,7 @@ import Contact from '../../assets/contact';
 import Browse from '../../assets/browse';
 
 
-const loggedOff = auth.signOut();
+
 const Header = ({currentUser}) => (
     <div className='header'>
         <Link className = 'logo-container' to= '/'>
@@ -25,9 +25,9 @@ const Header = ({currentUser}) => (
                 
             {
                 currentUser ? (
-                <Link className='option' to='/signin' onClick={() => loggedOff}>    
-                    <SignOut className='signout' />
-                </Link>
+                <div className='option' onClick={() => auth.signOut()}>    
+                  <SignOut className ='signout' />
+                </div>
                 ) : (
                 <Link className='option' to='/signin'>
                     <LogIn className='login' /> 

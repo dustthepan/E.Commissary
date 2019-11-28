@@ -20,7 +20,7 @@ class App extends React.Component {
   componentDidMount() { // fetching credentials
     this.unsubscribeAuth= auth.onAuthStateChanged( async userAuth => { // authState built in method in firebase
       
-      // createUserProfileDocument(userAuth);
+      // storing data into firebase database
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth); // checks to see if database has updated at reference (userRef)
           
@@ -28,13 +28,16 @@ class App extends React.Component {
             
             this.setState({
               currentUser: {
-                id: snapshot.id,
+                id: snapshot.id,  // returns snapShot object with data related to new and old users
+                // must use .data method to see snapshot data
                 ...snapshot.data()
               }
             })
-          }) // returns snapShot object with data related to new and old users
-          // must use .data method to see snapshot data
-      }
+            console.log(this.state)
+          })
+      } 
+
+      this.setState({currentUser: userAuth})
     
   });
 }
