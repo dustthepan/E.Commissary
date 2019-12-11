@@ -1,9 +1,15 @@
 .sign-up {
-  display: flex;
+  display: ruby-base;
   flex-direction: column;
   width: 380px;
+  color:#66CDAA;
+  margin-bottom: 50px;
+  
+  
 
   .title {
     margin: 10px 0;
+    color:#66CDAA;
+
   }
 }

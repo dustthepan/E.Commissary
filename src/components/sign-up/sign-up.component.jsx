@@ -7,8 +7,8 @@ import './sign-up.styles.scss';
 
 
 class SignUp extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             displayName : '',
             email: '',
@@ -62,8 +62,8 @@ handleChange = (e) => {
         const {displayName,email,password,confirmpw} = this.state
         return (
             <div className='sign-up'>
-                <h2 className='title'>Sign Up With Email and Password</h2>
-                <span>Don't have an account?</span>
+                <h2 className='title'>New Member?</h2>
+                <span>Sign Up With Email and Password</span>
                 <form className='sign-up form' onSubmit={this.handleSubmit}>
                     <FormInput
                         type='text'

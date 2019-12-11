@@ -2,35 +2,48 @@ import firebase from 'firebase/app';
 import 'firebase/firestore'; 
 import 'firebase/auth';
 
-const config = //INSERT HERE
+const config = //INSERT CONFIG FIREBASE KEYHERE
 
   firebase.initializeApp(config); // starts firebase
 
   export const auth = firebase.auth(); // exporting to use with anything with authentication 
   
-  export const firestore = firebase.firestore(); // exporting to database relalated functions
+  export const firestore = firebase.firestore(); // exporting to database related functions
   
-  const provider = new firebase.auth.GoogleAuthProvider(); // gives access to Google Auth Class
-  provider.setCustomParameters({prompt:'select_account'}); // use Custom Parameter method always trigger Google pop up when using provider for sign in and auth
+  //Sign in Google
+  const googleP = new firebase.auth.GoogleAuthProvider(); // gives access to Google Auth Class
+  googleP.setCustomParameters({prompt:'select_account'}); // use Custom Parameter method always trigger Google pop up when using provider for sign in and auth
   
-  export const signInGoogle = () => auth.signInWithPopup(provider);
+  export const signInGoogle = () => auth.signInWithPopup(googleP);
+
+  //Sign In Facebook
+  const facebookP = new firebase.auth.FacebookAuthProvider();
+  facebookP.setCustomParameters({prompt:'select_account'})
+
+  export const signInFacebook = () => auth.signInWithPopup(facebookP);
 
   // checks to see if user is already in db and creates one if not
   // takes user object when authenticated, and stores it into our database
   export const createUserProfileDocument = async (userAuth, additionalData) => {
-      
-    if (!userAuth) return; // if there is no user credentials, exit from function
+     
+    // if there is no user credentials, return back to the function
+    if (!userAuth) return; 
 
-    //if it does exist query inside doc
+    //if it does exist query the user id 
    const userRef = firestore.doc(`users/${userAuth.uid}`);
    
-    const snapShot = await userRef.get(); // grab data if ser exists
-
-   if (!snapShot.exists){
-      
+   //gets user info 
+    const snapShot = await userRef.get(); 
+   
+    //if there is no user data
+    if (!snapShot.exists){
+     
+     //create email and display name
+      //at timestamp 
     const {displayName, email} = userAuth
     const createdAt = new Date();
-
+      
+    // if there is user data, grab desired properties
     try {
       await userRef.set({
         displayName,

@@ -177,106 +177,106 @@ const SHOP_DATA = [
   },
   {
     id: 4,
-    title: 'Womens',
-    routeName: 'womens',
+    title: 'Diabetic',
+    routeName: 'diabetic',
     items: [
       {
         id: 23,
-        name: 'Blue Tanktop',
+        name: 'Diabetic Tussin',
         // imageUrl: 'https://i.ibb.co/7CQVJNm/blue-tank.png',
-        imageUrl: "/images/shop-img/womens/blue-tank.png",
+        imageUrl: "/images/shop-img/diabetic/diab1.jpg",
         price: 25
       },
       {
         id: 24,
-        name: 'Floral Blouse',
+        name: 'Eurcerin',
         // imageUrl: 'https://i.ibb.co/4W2DGKm/floral-blouse.png',
-        imageUrl: "/images/shop-img/womens/floral-blouse.png",
+        imageUrl: "/images/shop-img/diabetic/diab2.jpg",
         price: 20
       },
       {
         id: 25,
-        name: 'Floral Dress',
+        name: 'NatureMade Diabetes Vitamin Health Pack',
         // imageUrl: 'https://i.ibb.co/KV18Ysr/floral-skirt.png',
-        imageUrl: "/images/shop-img/womens/floral-skirt.png",
+        imageUrl: "/images/shop-img/diabetic/diab3.jpeg",
         price: 80
       },
       {
         id: 26,
-        name: 'Red Dots Dress',
+        name: 'Countour next EZ Monitor',
         // imageUrl: 'https://i.ibb.co/N3BN1bh/red-polka-dot-dress.png',
-        imageUrl: "/images/shop-img/womens/red-polka-dot-dress.png",
-        price: 80
+        imageUrl: "/images/shop-img/diabetic/diab4.jpg",
+        price: 12
       },
       {
         id: 27,
-        name: 'Striped Sweater',
+        name: 'Countour next EZ Test Strips',
         // imageUrl: 'https://i.ibb.co/KmSkMbH/striped-sweater.png',
-        imageUrl: "/images/shop-img/womens/striped-sweater.png",
+        imageUrl: "/images/shop-img/diabetic/diab5.jpg",
         price: 45
       },
       {
         id: 28,
-        name: 'Yellow Track Suit',
+        name: 'Countour next Testing Kit',
         // imageUrl: 'https://i.ibb.co/v1cvwNf/yellow-track-suit.png',
-        imageUrl: "/images/shop-img/womens/yellow-track-suit.png",
+        imageUrl: "/images/shop-img/diabetic/diab6.jpg",
         price: 135
       },
       {
         id: 29,
-        name: 'White Blouse',
+        name: 'TRUEplus Lancets',
         // imageUrl: 'https://i.ibb.co/qBcrsJg/white-vest.png',
-        imageUrl: "/images/shop-img/womens/white-vest.png",
+        imageUrl: "/images/shop-img/diabetic/diab7.jpg",
         price: 20
       }
     ]
   },
   {
     id: 5,
-    title: 'Mens',
-    routeName: 'mens',
+    title: 'Diagnostics',
+    routeName: 'diagnostics',
     items: [
       {
         id: 30,
-        name: 'Camo Down Vest',
+        name: 'First Check Home Drug Test',
         // imageUrl: 'https://i.ibb.co/xJS0T3Y/camo-vest.png',
-        imageUrl: "/images/shop-img/mens/camo-vest.png",
-        price: 325
+        imageUrl: "/images/shop-img/diagnostic/diag1.png",
+        price: 21
       },
       {
         id: 31,
-        name: 'Floral T-shirt',
+        name: 'First Response Pregnancy Test',
         // imageUrl: 'https://i.ibb.co/qMQ75QZ/floral-shirt.png',
-        imageUrl: "/images/shop-img/mens/floral-shirt.png",
-        price: 20
+        imageUrl: "/images/shop-img/diagnostic/diag2.jpg",
+        price: 14
       },
       {
         id: 32,
-        name: 'Black & White Longsleeve',
+        name: 'OVE Ketone Test Strips',
         // imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
-        imageUrl: "/images/shop-img/mens/long-sleeve.png",
-        price: 25
+        imageUrl: "/images/shop-img/diagnostic/diag3.jpg",
+        price: 15
       },
       {
         id: 33,
-        name: 'Pink T-shirt',
+        name: 'Clear Blue Ovulation Test System',
         // imageUrl: 'https://i.ibb.co/RvwnBL8/pink-shirt.png',
-        imageUrl: "/images/shop-img/mens/pink-shirt.png",
-        price: 25
+        imageUrl: "/images/shop-img/diagnostic/diag4.jpg",
+        price: 20
       },
       {
         id: 34,
-        name: 'Jean Long Sleeve',
+        name: 'First Check Cholesterol Home Test',
         // imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
-        imageUrl: "/images/shop-img/mens/roll-up-jean-shirt.png",
-        price: 40
+        imageUrl: "/images/shop-img/diagnostic/diag5.jpeg",
+        price: 14
       },
       {
         id: 35,
-        name: 'Burgundy T-shirt',
+        name: 'OMRON Blood Pressure Monitor',
         // imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
-        imageUrl: "/images/shop-img/mens/polka-dot-shirt.png",
-        price: 25
+        imageUrl: "/images/shop-img/diagnostic/diag6.jpeg",
+        price: 30
       }
     ]
   }

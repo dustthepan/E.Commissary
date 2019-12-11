@@ -16,7 +16,7 @@ class Directory extends React.Component {
                 },
                 {
                   title: 'oral care',
-                  imageUrl: "/datascrape-e/HomePage/oral.jpeg",
+                  imageUrl: "/datascrape-e/HomePage/oral2.gif",
                   id: 2,
                   linkUrl: 'shop/oral'
                 },
@@ -27,18 +27,18 @@ class Directory extends React.Component {
                   linkUrl: 'shop/pain'
                 },
                 {
-                  title: 'diagnostics',
-                  imageUrl: "/datascrape-e/HomePage/diagnostics.jpeg",
+                  title: 'diabetic',
+                  imageUrl: "/datascrape-e/HomePage/diabetes2.gif",
                   size: 'large',
                   id: 4,
-                  linkUrl: 'shop/womens'
+                  linkUrl: 'shop/diabetic'
                 },
                 {
-                  title: 'diabetics',
-                  imageUrl: "/datascrape-e/HomePage/diabetes.jpeg",
+                  title: 'diagnostics',
+                  imageUrl: "/datascrape-e/HomePage/diagnostics.gif",
                   size: 'large',
                   id: 5,
-                  linkUrl: 'shop/mens'
+                  linkUrl: 'shop/diagnostics'
                 }
               ]
         }

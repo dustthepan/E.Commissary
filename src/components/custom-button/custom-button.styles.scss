@@ -1,5 +1,5 @@
 .custom-button {
-  min-width: 165px;
+  min-width: 130px;
   width: auto;
   height: 50px;
   letter-spacing: 0.5px;
@@ -16,17 +16,33 @@
 
   &:hover {
     background-color: lightblue;
-    color:gray;
-    border: none;
+    color: mediumspringgreen;
+    border: solid 1px black;
+  
+
+  &.face-sign-in {
+    background-color: #357ae8;
+    color: white;
+    border: solid 1px lightsteelblue;
+    
+    &:hover{
+      background-color: white;
+      color: #357ae8;
+      border: solid 1px black
+    }
   }
 
   &.google-sign-in {
-    background-color: #4285f4;
-    color: white;
+    background-color:#357ae8;
+    color : whitesmoke;
+    border: solid 1px black;
 
+    
     &:hover{
-      background-color: #357ae8;
-      border: none;
+      background-color: white;
+      color: #357ae8;
+      border:solid 1px black
     }
   }
+ }
 }

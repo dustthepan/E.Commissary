@@ -1,12 +1,20 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {auth} from '../../firebase/filebase.utils';
+// allows access to redux 
+// can pass in two functions
+import {connect} from 'react-redux'; 
 import './header.styles.scss';
+
+//SVG
 import {Health as Logo} from '../../assets/logo';
 import LogIn from '../../assets/account';
 import SignOut from '../../assets/signout';
 import Contact from '../../assets/contact';
 import Browse from '../../assets/browse';
+//import { userInfo } from 'os';
+
+
 
 
 
@@ -36,6 +44,11 @@ const Header = ({currentUser}) => (
             }
         </div>
     </div>
-)
+);
 
-export default Header;
+const mapStateToProps = (state) => ({
+    currentUser: state.user.currentUser
+})
+
+
+export default connect(mapStateToProps)(Header);

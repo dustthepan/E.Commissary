@@ -1,7 +1,7 @@
 import React from 'react';
 import FormInput from '../form-input/form-input.component';
 import CustomButtom from '../custom-button/custom-button.component';
-import {signInGoogle} from '../../firebase/filebase.utils';
+import {signInGoogle, signInFacebook} from '../../firebase/filebase.utils';
 import './sign-in.styles.scss';
 // eslint-disable-next-line 
 import { sign } from 'crypto';
@@ -38,8 +38,8 @@ class SignIn extends React.Component {
     render(){
         return (
             <div className='sign-in'>
-                <h2>I already have an account</h2>
-                <span>Sign in with your email and password</span>   
+                <h2>Welcome Back!</h2>
+                <span className='signin-span'>Sign in with your email and password</span>   
 
                 <form onSubmit ={this.handleSubmit} >
                     <FormInput 
@@ -60,7 +60,10 @@ class SignIn extends React.Component {
                     <div className='buttons'>
                     <CustomButtom type='submit'> Sign In </CustomButtom>
                     <CustomButtom onClick={signInGoogle} isGoogleSignIn> 
-                        Sign in with Google 
+                            {'google'.toUpperCase()}
+                    </CustomButtom>
+                    <CustomButtom onClick={signInFacebook}> 
+                            {'facebook'.toUpperCase()}
                     </CustomButtom>
                     </div>
                 </form>

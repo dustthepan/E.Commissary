@@ -4,6 +4,7 @@ import ShopPage from './pages/shop/shop.component.jsx';
 import Header from './components/header/header.component';
 import Sign from './pages/sign/sign.component';
 import {Switch, Route} from 'react-router-dom';
+import {connect} from 'react-redux';
 import {auth ,createUserProfileDocument} from '../src/firebase/filebase.utils';
 import './App.css';
 
@@ -50,7 +51,7 @@ class App extends React.Component {
   render(){
     return (
       <div>
-        <Header currentUser={this.state.currentUser} />
+        <Header />
         <Switch>
           <Route exact path= '/' component={HomePage} /> 
           <Route path= '/shop' component={ShopPage} />
