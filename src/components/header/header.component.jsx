@@ -12,10 +12,6 @@ import LogIn from '../../assets/account';
 import SignOut from '../../assets/signout';
 import Contact from '../../assets/contact';
 import Browse from '../../assets/browse';
-//import { userInfo } from 'os';
-
-
-
 
 
 const Header = ({currentUser}) => (
