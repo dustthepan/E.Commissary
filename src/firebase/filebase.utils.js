@@ -2,7 +2,16 @@ import firebase from 'firebase/app';
 import 'firebase/firestore'; 
 import 'firebase/auth';
 
-const config = //INSERT CONFIG FIREBASE KEYHERE
+const config = { // SDK from Firebase Docs
+  apiKey: "AIzaSyD6FCyybTacUfpuve6w73efk3IkRPjywM8",
+  authDomain: "e-pharm-db.firebaseapp.com",
+  databaseURL: "https://e-pharm-db.firebaseio.com",
+  projectId: "e-pharm-db",
+  storageBucket: "e-pharm-db.appspot.com",
+  messagingSenderId: "41887260321",
+  appId: "1:41887260321:web:3a194c6dc954771275dae0",
+  measurementId: "G-VGG4Q5DPJY"
+};
 
   firebase.initializeApp(config); // starts firebase
 
