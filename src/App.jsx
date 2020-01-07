@@ -3,7 +3,8 @@ import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component.jsx';
 import Header from './components/header/header.component';
 import Sign from './pages/sign/sign.component';
-import {Switch, Route, Redirect} from 'react-router-dom';
+//add redirect so that once logged in, sign page cannot be revisited
+import {Switch, Route, Redirect} from 'react-router-dom'; 
 import {connect} from 'react-redux';
 import {setCurrentUser} from './redux/user/user.actions';
 import {auth ,createUserProfileDocument} from './firebase/filebase.utils';
@@ -62,16 +63,26 @@ class App extends React.Component {
         <Switch>
           <Route exact path= '/' component={HomePage} /> 
           <Route path= '/shop' component={ShopPage} />
-          <Route path= '/signin' component={Sign} />
+          <Route exact path= '/signin' render={()=> 
+          this.props.currentUser ? 
+          (<Redirect to ='/' />)
+          :
+          (<Sign/>)
+          }
+          />
         </Switch>
       </div>
     )
   }
 }
 
+const mapStateToProps = ({user}) => ({
+  currentUser: user.currentUser
+})
+
 const mapDispatchToProps = (dispatch) => ({
   // dispatch lets redux know any object passed in is an action object
   setCurrentUser: user => dispatch(setCurrentUser(user))
 })
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

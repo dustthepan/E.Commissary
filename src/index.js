@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {BrowserRouter} from 'react-router-dom';
-import {Provider} from 'react-redux';
-import store from './redux/store'
+import {BrowserRouter} from 'react-router-dom'; //routing for different pages in App
+import {Provider} from 'react-redux'; // provide store to actions/reducers
+import store from './redux/store'// needed for provider
 
 
 ReactDOM.render(

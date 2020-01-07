@@ -1,3 +1,5 @@
+import {userActionTypes} from './user.types'
+
 // set default state of current user
     const INITIAL_STATE = {
         currentUser : null
@@ -11,7 +13,7 @@
         //set current user to payload
     // if not return back to original state
 
-        if (action.type === 'SET_CURRENT_USER'){
+        if (action.type === userActionTypes.SET_CURRENT_USER){
             return {
                 ...state,
                 currentUser: action.payload
