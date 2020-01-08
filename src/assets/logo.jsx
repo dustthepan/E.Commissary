@@ -21,12 +21,6 @@ export function Health() {
 
   return (
     <div className={classes.root}>
-      {/* <HomeIcon />
-      <HomeIcon color="primary" />
-      <HomeIcon color="secondary" />
-      <HomeIcon color="action" />
-      <HomeIcon className={classes.iconHover} color="error" style={{ fontSize: 30 }} />
-      <HomeIcon color="disabled" fontSize="large" /> */}
       <LocalHospitalIcon
         color="primary"
         fontSize="large"

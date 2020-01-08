@@ -76,6 +76,7 @@ class App extends React.Component {
   }
 }
 
+//allows currentUser access as long as the account is signed in
 const mapStateToProps = ({user}) => ({
   currentUser: user.currentUser
 })

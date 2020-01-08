@@ -5,6 +5,8 @@ import {auth} from '../../firebase/filebase.utils';
 // can pass in two functions
 import {connect} from 'react-redux'; 
 import './header.styles.scss';
+import CartIcon from '../cart-icon/cart-icon.component';
+import CartDropDown from '../cart-dropdown/cart-dropdown.component';
 
 //SVG
 import {Health as Logo} from '../../assets/logo';
@@ -14,7 +16,7 @@ import Contact from '../../assets/contact';
 import Browse from '../../assets/browse';
 
 
-const Header = ({currentUser}) => (
+const Header = ({currentUser,hidden}) => (
     <div className='header'>
         <Link className = 'logo-container' to= '/'>
             <Logo className='logo'/>
@@ -38,13 +40,20 @@ const Header = ({currentUser}) => (
                 </Link>
                 ) 
             }
+        <CartIcon/>
         </div>
-    </div>
+        {
+            hidden ? null : <CartDropDown/>
+        }
+     </div>
 );
 
-const mapStateToProps = (state) => ({
-    currentUser: state.user.currentUser
-})
+// const mapStateToProps = (state) => ({
+//     currentUser: state.user.currentUser
+// })
 
+const mapStateToProps = ({user:currentUser, cart:hidden}) => ({
+    currentUser, hidden
+})
 
 export default connect(mapStateToProps)(Header);
