@@ -7,7 +7,7 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 const useStyles = makeStyles(theme => ({
   root: {
     '& > svg': {
-      margin: theme.spacing(-.7),
+      margin: theme.spacing(3),
     },
   },
   iconHover: {

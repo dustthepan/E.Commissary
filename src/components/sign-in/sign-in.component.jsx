@@ -1,10 +1,10 @@
 import React from 'react';
 import FormInput from '../form-input/form-input.component';
 import CustomButtom from '../custom-button/custom-button.component';
-import {signInGoogle, signInFacebook} from '../../firebase/filebase.utils';
+import {signInGoogle} from '../../firebase/filebase.utils';
 import './sign-in.styles.scss';
 // eslint-disable-next-line 
-import { sign } from 'crypto';
+//import { sign } from 'crypto';
 
 class SignIn extends React.Component {
     constructor(props) {
@@ -62,9 +62,9 @@ class SignIn extends React.Component {
                     <CustomButtom onClick={signInGoogle} isGoogleSignIn> 
                             {'google'.toUpperCase()}
                     </CustomButtom>
-                    <CustomButtom onClick={signInFacebook}> 
+                    {/* <CustomButtom onClick={signInFacebook}> 
                             {'facebook'.toUpperCase()}
-                    </CustomButtom>
+                    </CustomButtom> */}
                     </div>
                 </form>
             </div>

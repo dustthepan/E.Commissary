@@ -26,10 +26,10 @@ const config = { // SDK from Firebase Docs
   export const signInGoogle = () => auth.signInWithPopup(googleP);
 
   //Sign In Facebook
-  const facebookP = new firebase.auth.FacebookAuthProvider();
-  facebookP.setCustomParameters({prompt:'select_account'})
+  // const facebookP = new firebase.auth.FacebookAuthProvider();
+  // facebookP.setCustomParameters({prompt:'select_account'})
 
-  export const signInFacebook = () => auth.signInWithPopup(facebookP);
+  // export const signInFacebook = () => auth.signInWithPopup(facebookP);
 
   // checks to see if user is already in db and creates one if not
   // takes user object when authenticated, and stores it into our database

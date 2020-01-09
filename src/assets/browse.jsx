@@ -7,7 +7,7 @@ import {green,blue} from '@material-ui/core/colors';
 const useStyles = makeStyles(theme => ({
   root: {
     '& > svg': {
-      margin: theme.spacing(-.2),
+      margin: theme.spacing(-1),
     },
   },
   iconHover: {
