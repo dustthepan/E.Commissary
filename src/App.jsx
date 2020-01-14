@@ -12,7 +12,7 @@ import './App.css';
 
 class App extends React.Component {
   
-  //**REMOVED FOR REDUX */
+  //**REMOVED FOR REDUX */ state is now rendered through Redux
   // constructor(){
   //   super();
   //   this.state = {

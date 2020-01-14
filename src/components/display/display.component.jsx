@@ -9,11 +9,9 @@ const Display = ({title, items}) => (
             {
                 items
                 .filter((item,idx) => idx < 4)
-                .map(({id, ...itemProps}) => (
-                <DisplayItem key={id}{ ...itemProps} />
-                ))
-                
-            }
+                .map((item) => (
+                <DisplayItem key={item.id} item={item} />
+                ))}
         </div>
     </div>
 )

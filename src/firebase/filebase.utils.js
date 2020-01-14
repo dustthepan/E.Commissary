@@ -33,6 +33,7 @@ const config = { // SDK from Firebase Docs
 
   // checks to see if user is already in db and creates one if not
   // takes user object when authenticated, and stores it into our database
+  //asynchronously fetching user info and creating if it does not exist
   export const createUserProfileDocument = async (userAuth, additionalData) => {
      
     // if there is no user credentials, return back to the function
