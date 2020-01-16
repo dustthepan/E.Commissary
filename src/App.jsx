@@ -35,12 +35,14 @@ class App extends React.Component {
         userRef.onSnapshot(snapshot => {
             
               setCurrentUser({
-                id: snapshot.id,  // returns snapShot object with data related to new and old users
+                id: snapshot.id,  
+                // returns snapShot object with data related to new and old users
                 // must use .data method to see snapshot data
                 ...snapshot.data()
               })
             
-            console.log(this.state) // null from redux
+            //console.log(this.state) 
+            //null from redux
           })
       } 
 

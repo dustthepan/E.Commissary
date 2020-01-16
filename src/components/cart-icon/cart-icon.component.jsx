@@ -1,10 +1,10 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles'
 import {green,blue} from '@material-ui/core/colors';
-//import {ReactComponent as ShoppingIcon} from '../../assets/shopping-bag.svg';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import {connect} from 'react-redux'
 import {hideCart} from '../../redux/cart/cart.action';
+import {selectCartItemsCount} from '../../redux/cart/cart.selector'
 
 
 
@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     },
   }));
   
-    function CartIcon({hideCart}) {
+    function CartIcon({hideCart,itemCount}) {
     const classes = useStyles();
   
     return (
@@ -43,11 +43,12 @@ const useStyles = makeStyles(theme => ({
             return (
               <svg {...svgProps}>
                 <defs>
+            <span className='item-count'>{itemCount}</span>
                   <linearGradient id="gradient1">
                     <stop offset="50%" stopColor={blue[300]} />
                     <stop offset="100%" stopColor={blue[500]} />
                   </linearGradient>
-                </defs>
+                  </defs>
                 {React.cloneElement(svgProps.children[0], {
                   fill: 'url(#gradient1)',
                 })}
@@ -63,4 +64,14 @@ const useStyles = makeStyles(theme => ({
   hideCart: () => dispatch(hideCart())
 });
 
-export default connect(null, mapDispatchToProps)(CartIcon)
+  // void for selector
+  // const mapStateToProps = ({cart:{cartItems}}) => ({
+  //   itemCount: cartItems.reduce((accumalated, item) => accumalated + item.quantity, 0)
+  // })
+
+  // this code will not be visible because a different svg was used instead
+  const mapStateToProps = state => ({
+    itemCount: selectCartItemsCount(state) 
+  })
+
+export default connect(mapStateToProps, mapDispatchToProps)(CartIcon)
