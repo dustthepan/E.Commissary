@@ -4,6 +4,9 @@ import {auth} from '../../firebase/filebase.utils';
 // allows access to redux 
 // can pass in two functions
 import {connect} from 'react-redux'; 
+import {createStructuredSelector} from 'reselect';
+import {selectCurrentUser} from '../../redux/user/user.selector';
+import {selectHidden} from '../../redux/cart/cart.selector';
 import './header.styles.scss';
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropDown from '../cart-dropdown/cart-dropdown.component';
@@ -48,12 +51,15 @@ const Header = ({currentUser,hidden}) => (
      </div>
 );
 
-// const mapStateToProps = (state) => ({
-//     currentUser: state.user.currentUser
-// })
 
-const mapStateToProps = ({user:{currentUser}, cart:{hidden}}) => ({
-    currentUser, hidden
+// const mapStateToProps = (state) => ({
+//     currentUser: selectCurrentUser(state),
+//     hidden: selectHidden(state)
+// }) ** functions the same as with createStructuredSelector
+
+const mapStateToProps = createStructuredSelector({
+    currentUser: selectCurrentUser,
+    hidden: selectHidden
 })
 
 export default connect(mapStateToProps)(Header);

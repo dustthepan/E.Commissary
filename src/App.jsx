@@ -7,6 +7,8 @@ import Sign from './pages/sign/sign.component';
 import {Switch, Route, Redirect} from 'react-router-dom'; 
 import {connect} from 'react-redux';
 import {setCurrentUser} from './redux/user/user.actions';
+import {selectCurrentUser} from './redux/user/user.selector';
+import {createStructuredSelector} from 'reselect'
 import {auth ,createUserProfileDocument} from './firebase/filebase.utils';
 import './App.css';
 
@@ -79,8 +81,8 @@ class App extends React.Component {
 }
 
 //allows currentUser access as long as the account is signed in
-const mapStateToProps = ({user}) => ({
-  currentUser: user.currentUser
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
 })
 
 const mapDispatchToProps = (dispatch) => ({

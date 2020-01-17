@@ -4,7 +4,8 @@ import {green,blue} from '@material-ui/core/colors';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import {connect} from 'react-redux'
 import {hideCart} from '../../redux/cart/cart.action';
-import {selectCartItemsCount} from '../../redux/cart/cart.selector'
+import {selectCartItemsCount} from '../../redux/cart/cart.selector';
+import {createStructuredSelector} from 'reselect';
 
 
 
@@ -39,11 +40,12 @@ const useStyles = makeStyles(theme => ({
           fontSize="large"
           style={{fontSize: 56}}
           onClick={hideCart}
+          display={itemCount}
           component={svgProps => {
             return (
               <svg {...svgProps}>
                 <defs>
-            <span className='item-count'>{itemCount}</span>
+            {/* <span className='item-count'>{itemCount}</span> */}
                   <linearGradient id="gradient1">
                     <stop offset="50%" stopColor={blue[300]} />
                     <stop offset="100%" stopColor={blue[500]} />
@@ -70,8 +72,8 @@ const useStyles = makeStyles(theme => ({
   // })
 
   // this code will not be visible because a different svg was used instead
-  const mapStateToProps = state => ({
-    itemCount: selectCartItemsCount(state) 
+  const mapStateToProps = createStructuredSelector({
+    itemCount: selectCartItemsCount
   })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartIcon)

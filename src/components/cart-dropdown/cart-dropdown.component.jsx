@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {selectCartItems} from '../../redux/cart/cart.selector';
+import {createStructuredSelector} from 'reselect';
 import CartItem from '../cart-item/cart-item.component';
 import CustomButtom from '../custom-button/custom-button.component';
 import './cart-dropdown.styles.scss';
@@ -18,9 +19,9 @@ const CartDropDown = ({cartItems}) => (
     </div>
 )
 
-// use selector so that the dropdown component does not re-render when state changes that is unrelated to the cart items
-const mapStateToProps = state => ({
-    cartItems: selectCartItems(state) 
+// memoize selector so that the dropdown component does not re-render when state changes that is unrelated to the cart items
+const mapStateToProps = createStructuredSelector({
+    cartItems: selectCartItems
 })
 
 export default connect(mapStateToProps)(CartDropDown)
