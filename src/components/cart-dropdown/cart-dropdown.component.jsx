@@ -7,13 +7,17 @@ import CustomButtom from '../custom-button/custom-button.component';
 import './cart-dropdown.styles.scss';
 
 const CartDropDown = ({cartItems}) => (
-
+// if there are items in the cart, then render items in checkout
+//if not render message
     <div className= 'cart-dropdown'>
         <div className ='cart-items'>
-            {
+            { cartItems.length ?
                 cartItems.map(cartItem =>(
                     <CartItem key={cartItem.id} item={cartItem}/>
-                ))}
+                ))
+                :
+                <span className='empty'>Currently, no items added</span>
+                }
             </div>
             <CustomButtom>CHECKOUT</CustomButtom>
     </div>

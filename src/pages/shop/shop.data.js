@@ -7,66 +7,65 @@ const SHOP_DATA = [
     items: [
       {
         id: 1,
-        name: 'Advil',
-        // imageUrl: 'https://i.ibb.co/ZYW3VTp/brown-brim.png',
-        imageUrl: "/images/shop-img/cold/advil.jpg",
-        price: `$${12}`
+        name: 'AdViee',
+        imageUrl: "/images/shop-img/cold/advil.png",
+        price: `$${8}`
       },
       {
         id: 2,
-        name: 'Allegra',
+        name: 'Allegr0',
         // imageUrl: 'https://i.ibb.co/ypkgK0X/blue-beanie.png',
         imageUrl: "/images/shop-img/cold/allegra.png",
-        price: `$${12}`
+        price: `$${13}`
       },
       {
         id: 3,
-        name: 'Emergen-C',
-        // imageUrl: 'https://i.ibb.co/QdJwgmp/brown-cowboy.png',
-        imageUrl: "/images/shop-img/cold/emergenc.png",
-        price: `$${12}`
+        name: 'Qui-C',
+        imageUrl: "/images/shop-img/cold/emergency.png",
+        price: `$${11}`
       },
       {
         id: 4,
-        name: 'Mucinex',
-        // imageUrl: 'https://i.ibb.co/RjBLWxB/grey-brim.png',
-        imageUrl: "/images/shop-img/cold/mucinex.jpg",
+        name: 'BioPlus',
+        imageUrl: "/images/shop-img/cold/mucinex.png",
         price: `$${12}`
       },
       {
         id: 5,
-        name: 'Nyquil',
-        // imageUrl: 'https://i.ibb.co/YTjW3vF/green-beanie.png',
-        imageUrl: "/images/shop-img/cold/nyquil.jpg",
-        price: `$${12}`
+        name: 'Mintie',
+        imageUrl: "/images/shop-img/cold/nyquil.png",
+        price: `$${9}`
       },
       {
         id: 6,
-        name: 'Sudafed',
-        // imageUrl: 'https://i.ibb.co/rKBDvJX/palm-tree-cap.png',
-        imageUrl: "/images/shop-img/cold/sudafed.jpeg",
-        price: `$${12}`
+        name: 'MediMax',
+        imageUrl: "/images/shop-img/cold/sudafed.png",
+        price: `$${7}`
       },
       {
         id: 7,
-        name: 'Claritan',
-        // imageUrl: 'https://i.ibb.co/bLB646Z/red-beanie.png',
-        imageUrl: "/images/shop-img/cold/claritan.jpg",
-        price: `$${12}`
+        name: 'Clevritin',
+        imageUrl: "/images/shop-img/cold/claritan.png",
+        price: `$${19}`
       },
       {
         id: 8,
-        name: 'Dayquil',
-        // imageUrl: 'https://i.ibb.co/1f2nWMM/wolf-cap.png',
-        imageUrl: "/images/shop-img/cold/dayquil.jpg",
-        price: `$${12}`
+        name: 'Fixie',
+        imageUrl: "/images/shop-img/cold/dayquil.png",
+        price: `$${10}`
       },
       {
         id: 9,
-        name: 'Tylenol',
+        name: 'PowerDo',
         // imageUrl: 'https://i.ibb.co/X2VJP2W/blue-snapback.png',
-        imageUrl: "/images/shop-img/cold/tylenol.jpeg",
-        price: `$${12}`
+        imageUrl: "/images/shop-img/cold/tylenol.png",
+        price: `$${8}`
+      },
+      {
+        id: 10,
+        name: "Xirop Allergy",
+        imageUrl: "/images/shop-img/cold/Xyzal.png",
+        price: `$${8}`
       }
     ]
   },
@@ -78,57 +77,49 @@ const SHOP_DATA = [
       {
         id: 10,
         name: 'DenTek Dental Guard',
-        // imageUrl: 'https://i.ibb.co/0s3pdnc/adidas-nmd.png',
-        imageUrl: "/images/shop-img/oral/mouthguard.jpg", 
+        imageUrl: "/images/shop-img/oral/mouthguard.png", 
         price: `$${12}`
       },
       {
         id: 11,
-        name: 'Sensodyne',
-        // imageUrl: 'https://i.ibb.co/dJbG1cT/yeezy.png',
-        imageUrl: "/images/shop-img/oral/sensodyne.jpeg",
+        name: 'Senshine',
+        imageUrl: "/images/shop-img/oral/sensodyne.png",
         price: `$${12}`
       },
       {
         id: 12,
-        name: 'Oralb Electronic Toothbrush',
-        // imageUrl: 'https://i.ibb.co/bPmVXyP/black-converse.png',
-        imageUrl: "/images/shop-img/oral/oralb.jpg",
+        name: 'ElectriBRU',
+        imageUrl: "/images/shop-img/oral/oralb.png",
         price: `$${12}`
       },
       {
         id: 13,
-        name: 'Oralb Glide Floss',
-        // imageUrl: 'https://i.ibb.co/1RcFPk0/white-nike-high-tops.png',
+        name: 'Dentac Floss',
         imageUrl: "/images/shop-img/oral/floss.png",
         price: `$${12}`
       },
       {
         id: 14,
-        name: 'Oralb Toothbrush',
-        // imageUrl: 'https://i.ibb.co/QcvzydB/nikes-red.png',
-        imageUrl: "/images/shop-img/oral/brush.jpg",
+        name: 'DenBRU',
+        imageUrl: "/images/shop-img/oral/brush.png",
         price: `$${12}`
       },
       {
         id: 15,
-        name: 'Oraljel Toothache Relief',
-        // imageUrl: 'https://i.ibb.co/fMTV342/nike-brown.png',
+        name: 'RestoJel',
         imageUrl: "/images/shop-img/oral/oraljel.png",
         price: `$${12}`
       },
       {
         id: 16,
-        name: 'Crest Mouthwash',
-        // imageUrl: 'https://i.ibb.co/w4k6Ws9/nike-funky.png',
-        imageUrl: "/images/shop-img/oral/mouthwash.jpg",
+        name: 'Protectva',
+        imageUrl: "/images/shop-img/oral/mouthwash.png",
         price: `$${12}`
       },
       {
         id: 17,
-        name: 'Oralb Floss Picks',
-        // imageUrl: 'https://i.ibb.co/Mhh6wBg/timberlands.png',
-        imageUrl: "/images/shop-img/oral/picks.jpg",
+        name: 'Dentac Picks',
+        imageUrl: "/images/shop-img/oral/picks.png",
         price: `$${12}`
       }
     ]
@@ -140,36 +131,31 @@ const SHOP_DATA = [
     items: [
       {
         id: 18,
-        name: 'Excedrin Migraine',
-        // imageUrl: 'https://i.ibb.co/XzcwL5s/black-shearling.png',
-        imageUrl: "/images/shop-img/pain/pain1.jpg",
+        name: 'Xerov',
+        imageUrl: "/images/shop-img/pain/pain1.png",
         price: `$${12}`
       },
       {
         id: 19,
-        name: 'Tylenol Arthritis',
-        // imageUrl: 'https://i.ibb.co/mJS6vz0/blue-jean-jacket.png',
+        name: 'Artho',
         imageUrl: "/images/shop-img/pain/pain2.png",
         price: `$${12}`
       },
       {
         id: 20,
-        name: 'IcyHot Medicated Patch',
-        // imageUrl: 'https://i.ibb.co/N71k1ML/grey-jean-jacket.png',
+        name: 'MENthol Patch',
         imageUrl: "/images/shop-img/pain/pain3.png",
         price: `$${12}`
       },
       {
         id: 21,
-        name: 'Motrin Liquid Gels',
-        // imageUrl: 'https://i.ibb.co/s96FpdP/brown-shearling.png',
-        imageUrl: "/images/shop-img/pain/pain4.jpg",
+        name: 'Mevrov Liquid Gels',
+        imageUrl: "/images/shop-img/pain/pain4.png",
         price: `$${12}`
       },
       {
         id: 22,
-        name: 'Aleve',
-        // imageUrl: 'https://i.ibb.co/M6hHc3F/brown-trench.png',
+        name: 'Evera',
         imageUrl: "/images/shop-img/pain/pain5.jpeg",
         price: `$${12}`
       }
@@ -182,51 +168,44 @@ const SHOP_DATA = [
     items: [
       {
         id: 23,
-        name: 'Diabetic Tussin',
-        // imageUrl: 'https://i.ibb.co/7CQVJNm/blue-tank.png',
-        imageUrl: "/images/shop-img/diabetic/diab1.jpg",
+        name: 'Energibatic',
+        imageUrl: "/images/shop-img/diabetic/diab1.png",
         price: `$${12}`
       },
       {
         id: 24,
-        name: 'Eurcerin',
-        // imageUrl: 'https://i.ibb.co/4W2DGKm/floral-blouse.png',
-        imageUrl: "/images/shop-img/diabetic/diab2.jpg",
+        name: 'SKIN Expert',
+        imageUrl: "/images/shop-img/diabetic/diab2.png",
         price: `$${12}`
       },
       {
         id: 25,
-        name: 'NatureMade Diabetes Vitamin Health Pack',
-        // imageUrl: 'https://i.ibb.co/KV18Ysr/floral-skirt.png',
-        imageUrl: "/images/shop-img/diabetic/diab3.jpeg",
+        name: 'NaturA',
+        imageUrl: "/images/shop-img/diabetic/diab3.png",
         price: `$${12}`
       },
       {
         id: 26,
-        name: 'Countour next EZ Monitor',
-        // imageUrl: 'https://i.ibb.co/N3BN1bh/red-polka-dot-dress.png',
-        imageUrl: "/images/shop-img/diabetic/diab4.jpg",
+        name: 'CureStrip Monitor',
+        imageUrl: "/images/shop-img/diabetic/diab4.png",
         price: `$${12}`
       },
       {
         id: 27,
-        name: 'Countour next EZ Test Strips',
-        // imageUrl: 'https://i.ibb.co/KmSkMbH/striped-sweater.png',
-        imageUrl: "/images/shop-img/diabetic/diab5.jpg",
+        name: 'CureStrip Test Strips',
+        imageUrl: "/images/shop-img/diabetic/diab5.png",
         price: `$${12}`
       },
       {
         id: 28,
-        name: 'Countour next Testing Kit',
-        // imageUrl: 'https://i.ibb.co/v1cvwNf/yellow-track-suit.png',
-        imageUrl: "/images/shop-img/diabetic/diab6.jpg",
+        name: 'q-pharm Diabetic Testing Kit',
+        imageUrl: "/images/shop-img/diabetic/diab6.png",
         price: `$${12}`
       },
       {
         id: 29,
-        name: 'TRUEplus Lancets',
-        // imageUrl: 'https://i.ibb.co/qBcrsJg/white-vest.png',
-        imageUrl: "/images/shop-img/diabetic/diab7.jpg",
+        name: 'FitLIFE Lancets',
+        imageUrl: "/images/shop-img/diabetic/diab7.png",
         price: `$${12}`
       }
     ]
