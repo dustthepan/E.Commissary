@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {green,blue} from '@material-ui/core/colors';
+import {green,lightBlue} from '@material-ui/core/colors';
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
 
 const useStyles = makeStyles(theme => ({
@@ -30,8 +30,8 @@ export function Health() {
             <svg {...svgProps}>
               <defs>
                 <linearGradient id="gradient1">
-                  <stop offset="50%" stopColor={blue[300]} />
-                  <stop offset="100%" stopColor={blue[500]} />
+                  <stop offset="50%" stopColor={lightBlue[50]} />
+                  <stop offset="100%" stopColor={lightBlue[50]} />
                 </linearGradient>
               </defs>
               {React.cloneElement(svgProps.children[0], {

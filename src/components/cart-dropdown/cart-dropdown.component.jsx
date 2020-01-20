@@ -1,12 +1,13 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import{withRouter} from 'react-router-dom';
 import {selectCartItems} from '../../redux/cart/cart.selector';
 import {createStructuredSelector} from 'reselect';
 import CartItem from '../cart-item/cart-item.component';
 import CustomButtom from '../custom-button/custom-button.component';
 import './cart-dropdown.styles.scss';
 
-const CartDropDown = ({cartItems}) => (
+const CartDropDown = ({cartItems, history}) => (
 // if there are items in the cart, then render items in checkout
 //if not render message
     <div className= 'cart-dropdown'>
@@ -19,7 +20,7 @@ const CartDropDown = ({cartItems}) => (
                 <span className='empty'>Currently, no items added</span>
                 }
             </div>
-            <CustomButtom>CHECKOUT</CustomButtom>
+            <CustomButtom onClick={()=> history.push('/checkout')}>CHECKOUT</CustomButtom>
     </div>
 )
 
@@ -28,4 +29,5 @@ const mapStateToProps = createStructuredSelector({
     cartItems: selectCartItems
 })
 
-export default connect(mapStateToProps)(CartDropDown)
+//used withRouter method to grab history prop from Router lib
+export default withRouter(connect(mapStateToProps)(CartDropDown))
