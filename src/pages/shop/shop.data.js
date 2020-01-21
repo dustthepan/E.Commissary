@@ -217,38 +217,38 @@ const SHOP_DATA = [
     items: [
       {
         id: 30,
-        name: 'First Check Home Drug Test',
+        name: 'Fast Check Drug Test',
         imageUrl: "/images/shop-img/diagnostic/diag1.png",
         price: 35
       },
       {
         id: 31,
-        name: 'First Response Pregnancy Test',
-        imageUrl: "/images/shop-img/diagnostic/diag2.jpg",
+        name: 'Fast Solution Pregnancy Test',
+        imageUrl: "/images/shop-img/diagnostic/diag2.png",
         price: 15
       },
       {
         id: 32,
-        name: 'OVE Ketone Test Strips',
-        imageUrl: "/images/shop-img/diagnostic/diag3.jpg",
+        name: 'EV Ketone Test Strips',
+        imageUrl: "/images/shop-img/diagnostic/diag3.png",
         price: 8
       },
       {
         id: 33,
-        name: 'Clear Blue Ovulation Test System',
-        imageUrl: "/images/shop-img/diagnostic/diag4.jpg",
+        name: 'HAZi Ovulation Test System',
+        imageUrl: "/images/shop-img/diagnostic/diag4.png",
         price: 17
       },
       {
         id: 34,
-        name: 'First Check Cholesterol Home Test',
-        imageUrl: "/images/shop-img/diagnostic/diag5.jpeg",
+        name: 'Fast Check Cholesterol Test',
+        imageUrl: "/images/shop-img/diagnostic/diag5.png",
         price: 21
       },
       {
         id: 35,
-        name: 'OMRON Blood Pressure Monitor',
-        imageUrl: "/images/shop-img/diagnostic/diag6.jpeg",
+        name: 'q-Heal Blood Pressure Monitor',
+        imageUrl: "/images/shop-img/diagnostic/diag6.png",
         price: 40
       }
     ]
