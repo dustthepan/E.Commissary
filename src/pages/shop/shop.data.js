@@ -9,63 +9,63 @@ const SHOP_DATA = [
         id: 1,
         name: 'AdViee',
         imageUrl: "/images/shop-img/cold/advil.png",
-        price: `$${8}`
+        price: 8
       },
       {
         id: 2,
         name: 'Allegr0',
         // imageUrl: 'https://i.ibb.co/ypkgK0X/blue-beanie.png',
         imageUrl: "/images/shop-img/cold/allegra.png",
-        price: `$${13}`
+        price: 13
       },
       {
         id: 3,
         name: 'Qui-C',
         imageUrl: "/images/shop-img/cold/emergency.png",
-        price: `$${11}`
+        price: 11
       },
       {
         id: 4,
         name: 'BioPlus',
         imageUrl: "/images/shop-img/cold/mucinex.png",
-        price: `$${12}`
+        price: 12
       },
       {
         id: 5,
         name: 'Mintie',
         imageUrl: "/images/shop-img/cold/nyquil.png",
-        price: `$${9}`
+        price: 9
       },
       {
         id: 6,
         name: 'MediMax',
         imageUrl: "/images/shop-img/cold/sudafed.png",
-        price: `$${7}`
+        price: 7
       },
       {
         id: 7,
         name: 'Clevritin',
         imageUrl: "/images/shop-img/cold/claritan.png",
-        price: `$${19}`
+        price: 19
       },
       {
         id: 8,
         name: 'Fixie',
         imageUrl: "/images/shop-img/cold/dayquil.png",
-        price: `$${10}`
+        price: 10
       },
       {
         id: 9,
         name: 'PowerDo',
         // imageUrl: 'https://i.ibb.co/X2VJP2W/blue-snapback.png',
         imageUrl: "/images/shop-img/cold/tylenol.png",
-        price: `$${8}`
+        price: 8
       },
       {
         id: 10,
         name: "Xirop Allergy",
         imageUrl: "/images/shop-img/cold/Xyzal.png",
-        price: `$${8}`
+        price: 8
       }
     ]
   },
@@ -78,49 +78,49 @@ const SHOP_DATA = [
         id: 10,
         name: 'DenTek Dental Guard',
         imageUrl: "/images/shop-img/oral/mouthguard.png", 
-        price: `$${12}`
+        price: 15
       },
       {
         id: 11,
         name: 'Senshine',
         imageUrl: "/images/shop-img/oral/sensodyne.png",
-        price: `$${12}`
+        price: 6
       },
       {
         id: 12,
         name: 'ElectriBRU',
         imageUrl: "/images/shop-img/oral/oralb.png",
-        price: `$${12}`
+        price: 100
       },
       {
         id: 13,
         name: 'Dentac Floss',
         imageUrl: "/images/shop-img/oral/floss.png",
-        price: `$${12}`
+        price: 15
       },
       {
         id: 14,
         name: 'DenBRU',
         imageUrl: "/images/shop-img/oral/brush.png",
-        price: `$${12}`
+        price: 11
       },
       {
         id: 15,
         name: 'RestoJel',
         imageUrl: "/images/shop-img/oral/oraljel.png",
-        price: `$${12}`
+        price: 10
       },
       {
         id: 16,
         name: 'Protectva',
         imageUrl: "/images/shop-img/oral/mouthwash.png",
-        price: `$${12}`
+        price: 5
       },
       {
         id: 17,
         name: 'Dentac Picks',
         imageUrl: "/images/shop-img/oral/picks.png",
-        price: `$${12}`
+        price: 10
       }
     ]
   },

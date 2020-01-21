@@ -17,7 +17,7 @@ return (
         />
         <div className='display-footer'>
     <span className='name'>{name}</span>
-    <span className='price'>{price}</span>
+    <span className='price'> ${price}</span>
         </div>
         <CustomButton onClick={()=> addCart(item)} inverted >ADD TO CART</CustomButton>
     </div>

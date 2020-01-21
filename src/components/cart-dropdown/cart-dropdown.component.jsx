@@ -1,13 +1,15 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import{withRouter} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import {selectCartItems} from '../../redux/cart/cart.selector';
 import {createStructuredSelector} from 'reselect';
 import CartItem from '../cart-item/cart-item.component';
 import CustomButtom from '../custom-button/custom-button.component';
+import {hideCart} from '../../redux/cart/cart.action';
 import './cart-dropdown.styles.scss';
 
-const CartDropDown = ({cartItems, history}) => (
+//if mapDispatchToProps is not passed through connect, it can be destructured through props
+const CartDropDown = ({cartItems, history, dispatch}) => (
 // if there are items in the cart, then render items in checkout
 //if not render message
     <div className= 'cart-dropdown'>
@@ -20,7 +22,11 @@ const CartDropDown = ({cartItems, history}) => (
                 <span className='empty'>Currently, no items added</span>
                 }
             </div>
-            <CustomButtom onClick={()=> history.push('/checkout')}>CHECKOUT</CustomButtom>
+            <CustomButtom onClick={
+                () => {history.push('/checkout');
+                dispatch(hideCart())} 
+
+            }>CHECKOUT</CustomButtom>
     </div>
 )
 
