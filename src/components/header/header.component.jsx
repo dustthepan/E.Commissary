@@ -51,7 +51,7 @@ const Header = ({currentUser,hidden}) => (
      </div>
 );
 
-
+//redux
 // const mapStateToProps = (state) => ({
 //     currentUser: selectCurrentUser(state),
 //     hidden: selectHidden(state)

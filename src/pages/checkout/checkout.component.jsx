@@ -29,14 +29,15 @@ const Checkout = ({cartItems,total}) => (
     }
 
     <div className ='total'>
-        <span>TOTAL:{total}</span>
+        <span>TOTAL:${total}</span>
     </div>
     </div>
 );
 
+//redux
 const mapStateToProps = createStructuredSelector({
     cartItems: selectCartItems,
-    total: selectCartTotal //rendering NaN due to interpolated value
+    total: selectCartTotal 
 });
 
 export default connect(mapStateToProps)(Checkout);

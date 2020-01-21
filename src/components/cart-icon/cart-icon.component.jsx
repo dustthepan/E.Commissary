@@ -8,15 +8,6 @@ import {selectCartItemsCount} from '../../redux/cart/cart.selector';
 import {createStructuredSelector} from 'reselect';
 
 
-
-// const CartIcon = ({cartAction}) => (
-
-//     <div className = 'cart-icon'>
-//         <ShopIcon className='shopping-icon' onClick={cartAction}/>
-//         <span className='item-count'>0</span>
-//     </div>
-// );
-
 const useStyles = makeStyles(theme => ({
     root: {
       '& > svg': {

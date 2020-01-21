@@ -23,6 +23,7 @@ return (
     </div>
 )};
 
+//redux
 const mapDispatchToProps = (dispatch) => ({
     addCart: (item) => dispatch(addCart(item))
 })

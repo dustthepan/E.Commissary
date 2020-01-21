@@ -29,7 +29,7 @@ const CartDropDown = ({cartItems, history, dispatch}) => (
             }>CHECKOUT</CustomButtom>
     </div>
 )
-
+//redux
 // memoize selector so that the dropdown component does not re-render when state changes that is unrelated to the cart items
 const mapStateToProps = createStructuredSelector({
     cartItems: selectCartItems
