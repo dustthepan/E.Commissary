@@ -19,7 +19,7 @@ return (
     <span className='name'>{name}</span>
     <span className='price'> ${price}</span>
         </div>
-        <CustomButton onClick={()=> addCart(item)} inverted >ADD TO CART</CustomButton>
+        <CustomButton onClick={()=> addCart(item)} inverted > ADD TO BASKET</CustomButton>
     </div>
 )};
 

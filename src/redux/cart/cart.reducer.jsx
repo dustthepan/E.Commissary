@@ -19,6 +19,12 @@ if (action.type === cartTypes.TOGGLE_CART_HIDDEN){
         ...state,
         cartItems: addItemsToCart(state.cartItems,action.payload)
     }
+} else if (action.type === cartTypes.REMOVE_ITEM){
+    return {
+        ...state,
+        cartItems: state.cartItems.filter(cartItem => 
+            cartItem.id !== action.payload.id)
+    }
 } else {
         return state;
     }

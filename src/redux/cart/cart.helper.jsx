@@ -25,5 +25,6 @@ export const addItemsToCart = (cartItems,addedItems) => {
     )
 }
 
+//quantity is now a prop of cartItems
 return [...cartItems, {...addedItems, quantity: 1}];
 };

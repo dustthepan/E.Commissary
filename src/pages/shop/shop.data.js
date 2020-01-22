@@ -14,7 +14,6 @@ const SHOP_DATA = [
       {
         id: 2,
         name: 'Allegr0',
-        // imageUrl: 'https://i.ibb.co/ypkgK0X/blue-beanie.png',
         imageUrl: "/images/shop-img/cold/allegra.png",
         price: 13
       },
