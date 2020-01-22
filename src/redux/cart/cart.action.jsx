@@ -14,3 +14,8 @@ export const removeItem = (item) => ({
     payload:item
 })
 
+export const toggleQuantity = (value) => ({
+    type:cartTypes.QUANTITY_TOGGLE,
+    payload :value
+})
+
