@@ -1,8 +1,13 @@
 import React from 'react';
-import Display from '../../components/display/display.component';
-import {connect} from 'react-redux';
-import {selectInventory} from '../../redux/products/products.selector';
-import {createStructuredSelector} from 'reselect';
+import {Route} from 'react-router-dom';
+import renderInventory from '../../components/inventory/inventory.component';
+import Products from '../products/products.component';
+
+//removed for inventory page
+// import Display from '../../components/display/display.component';
+// import {connect} from 'react-redux';
+// import {selectInventory} from '../../redux/products/products.selector';
+// import {createStructuredSelector} from 'reselect';
 
 
 //redux implement
@@ -15,20 +20,18 @@ import {createStructuredSelector} from 'reselect';
 //         }
 //     }
 
-const ShopPage = ({inventory}) => (
+const ShopPage = ({match}) => (
 
-<div className='display'>
-         {
-            inventory.map(({id, ...otherParts}) => (
-                 <Display key={id} {...otherParts} />
-             ))
-          }
-        </div>
+    <div className='display'>
+            <Route exact path={`${match.path}`} component={renderInventory} />
+            <Route path ={`${match.path}/:productID`} component ={Products} />
+    </div>
  );
 
- const mapStateToProps = createStructuredSelector({
-     inventory: selectInventory
- })
+//removed added to inventory component
+//  const mapStateToProps = createStructuredSelector({
+//      inventory: selectInventory
+//  })
 
 
-export default connect(mapStateToProps) (ShopPage);
+export default ShopPage;
