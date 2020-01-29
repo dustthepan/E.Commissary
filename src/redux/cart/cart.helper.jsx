@@ -37,7 +37,8 @@ export const quantityHandle = (cartItems,removedItems) => {
     cartItems.filter(cartItem => cartItem.id !== removedItems.id)
   }
 
-  return cartItems.map(cartItem => cartItem.id === removedItems.id 
+  return cartItems.map(cartItem => 
+    cartItem.id === removedItems.id 
     ?
     {
       ...cartItems, quantity:cartItem.quantity-1

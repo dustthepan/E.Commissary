@@ -24,7 +24,7 @@ const Header = ({currentUser,hidden}) => (
         <Link className = 'logo-container' to= '/'>
             <Logo className='logo'/>
         </Link>
-       
+        
         <div className='options'>
             {
                 currentUser ? (<span className='display-name'>Hello! {currentUser.displayName}</span>)
