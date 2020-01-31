@@ -4,9 +4,9 @@ import DisplayItem from '../../components/display-item/display-item.component';
 import {selectCollection} from '../../redux/products/products.selector';
 import './products.styles.scss';
 
-const Products = ({collections}) => {
-    console.log(collections)
-   const {title,items} = collections
+const Products = ({inventory}) => {
+    
+   const {title,items} = inventory
     return (
     <div className ='inventory-page'>
         <h2 className='title'>{title}</h2>
@@ -23,7 +23,7 @@ const Products = ({collections}) => {
 
 const mapStateToProps = (state,ownProps) => ({
 
-    collections: selectCollection(ownProps.match.params.productID)(state)
+    inventory: selectCollection(ownProps.match.params.productID)(state)
 
 });
 

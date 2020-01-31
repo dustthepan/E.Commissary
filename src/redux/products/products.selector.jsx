@@ -15,18 +15,18 @@ const selectProduct = state => state.product;
 
 export const selectCollections = createSelector(
     [selectProduct],
-    (product) => product.collections
+    (product) => product.inventory
 );
 
 export const selectPreview = createSelector(
     [selectCollections],
-    (collections) => Object.keys(collections).map(key => collections[key])
+    (inventory) => Object.keys(inventory).map(key => inventory[key])
 );
 
 export const selectCollection= productUrl => 
       createSelector(
         [selectCollections],
-        (collections) => collections[productUrl]
+        (inventory) => inventory[productUrl]
     );
       
     

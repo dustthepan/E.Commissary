@@ -1,6 +1,5 @@
 import React from 'react';
 import DisplayItem from '../display-item/display-item.component';
-//import {selectConvert} from '../../redux/products/products.selector'
 import './display.styles.scss';
 
 const Display = ({title, items}) => (

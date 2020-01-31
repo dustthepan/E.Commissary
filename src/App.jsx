@@ -93,7 +93,8 @@ const mapStateToProps = createStructuredSelector({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  // dispatch lets redux know any object passed in is an action object
+  // dispatch lets redux know any object passed in is an action object 
+  //immediate action
   setCurrentUser: user => dispatch(setCurrentUser(user))
 })
 
