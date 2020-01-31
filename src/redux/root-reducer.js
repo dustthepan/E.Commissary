@@ -14,7 +14,7 @@ import productReducer from './products/product.reducer';
 const persistConfig = {
     key: 'root',
     storage, 
-    maintainList:['cart'] 
+    whitelist:['cart'] 
     //persist cart only 
 }
 
