@@ -9,7 +9,7 @@ const Products = ({inventory}) => {
    const {title,items} = inventory
     return (
     <div className ='inventory-page'>
-        <h2 className='title'>{title}</h2>
+        <h2 className='title'>{title.toUpperCase()}</h2>
         <div className='items'>
             {
                 items.map(item => (

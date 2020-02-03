@@ -76,6 +76,7 @@ const SHOP_DATA = {
       {
         id: 10,
         name: 'DenTek Dental Guard',
+        description: "Protect your jaw \n fighting people",
         imageUrl: "/images/shop-img/oral/mouthguard.png", 
         price: 15
       },
@@ -125,7 +126,7 @@ const SHOP_DATA = {
   },
  pain:{
     id: 3,
-    title: 'pain relief',
+    title: 'Pain Relief',
     routeName: 'pain',
     items: [
       {
@@ -155,7 +156,7 @@ const SHOP_DATA = {
       {
         id: 22,
         name: 'Evera',
-        imageUrl: "/images/shop-img/pain/pain5.jpeg",
+        imageUrl: "/images/shop-img/pain/pain5.png",
         price: 14
       }
     ]

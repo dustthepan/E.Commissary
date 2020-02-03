@@ -6,15 +6,16 @@ import './display-item.styles.scss';
 
 const DisplayItem = ({item, addCart}) => { 
     
-    const {name,price,imageUrl} = item
+    const {name,price,imageUrl,description} = item
 return (
     <div className='display-item'>
         <div 
         className='image'
         style={{
-            backgroundImage: `url(${imageUrl})`
+            backgroundImage: `url(${imageUrl})` 
         }}
         />
+<span className='description'>Description:{description}</span>
         <div className='display-footer'>
     <span className='name'>{name}</span>
     <span className='price'> ${price}</span>

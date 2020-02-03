@@ -1,12 +1,13 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {blue} from '@material-ui/core/colors';
-import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
+//import {blue} from '@material-ui/core/colors';
+//import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
+import {ReactComponent as Logo} from './PHARM-EC.svg';
 
 const useStyles = makeStyles(theme => ({
   root: {
     '& > svg': {
-      margin: theme.spacing(-3),
+      margin: theme.spacing(-8),
     },
   },
  
@@ -17,26 +18,8 @@ export function Health() {
 
   return (
     <div className={classes.root}>
-      <LocalHospitalIcon
-        color="primary"
-        fontSize="large"
-        style={{fontSize: 100}}
-        component={svgProps => {
-          return (
-            <svg {...svgProps}>
-              <defs>
-                <linearGradient id="gradient1">
-                  <stop offset="50%" stopColor={blue[600]} />
-                  <stop offset="100%" stopColor={blue[100]} />
-                </linearGradient>
-              </defs>
-              {React.cloneElement(svgProps.children[0], {
-                fill: 'url(#gradient1)',
-              })}
-            </svg>
-          );
-        }}
-      />
+      <Logo color="primary"
+      fontSize="small"/>
     </div>
   );
 }
