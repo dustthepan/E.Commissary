@@ -76,7 +76,7 @@ const SHOP_DATA = {
       {
         id: 10,
         name: 'DenTek Dental Guard',
-        description: "Protect your jaw \n fighting people",
+        description: "Protect your jaw, when fighting",
         imageUrl: "/images/shop-img/oral/mouthguard.png", 
         price: 15
       },

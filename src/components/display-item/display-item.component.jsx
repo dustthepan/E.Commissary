@@ -6,7 +6,7 @@ import './display-item.styles.scss';
 
 const DisplayItem = ({item, addCart}) => { 
     
-    const {name,price,imageUrl,description} = item
+    const {name,price,imageUrl} = item
 return (
     <div className='display-item'>
         <div 
@@ -15,7 +15,7 @@ return (
             backgroundImage: `url(${imageUrl})` 
         }}
         />
-<span className='description'>Description:{description}</span>
+    {/* <span className='description'><b>Description:</b>{description}</span> */}
         <div className='display-footer'>
     <span className='name'>{name}</span>
     <span className='price'> ${price}</span>

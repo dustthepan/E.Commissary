@@ -5,6 +5,7 @@
   height: 350px;
   align-items: center;
   position: relative;
+
  
 
   .image {
@@ -28,15 +29,6 @@
       opacity: .08;
     }
 
-    .description {
-    width: 100%;
-    height: 95%;
-    background-size: cover;
-    background-position: top;
-    margin-bottom: 50px;
-    color: midnightblue;
-    }
-
     .custom-button {
       opacity: .85;
       display: flex;
@@ -49,17 +41,18 @@
     width: 100%;
     height: 5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     font-size: 18px;
-
+    margin-left: 10px;
     .name {
       width: 80%;
-      margin-bottom: 20px;
+      margin-left: 30px;
       color: midnightblue;
     }
 
     .price {
       width: 10%;
+      margin-left: -20px;
       color:midnightblue;
     }
   }
