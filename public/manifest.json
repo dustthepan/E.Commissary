@@ -1,10 +1,16 @@
+  
 {
- "name": "App",
- "icons": [
-  {
-   "src": "\/apple-touch-icon.png",
-   "sizes": "32x32",
-   "type": "image\/png",
-   "density": "0.75"
-  }
-]}
+  "short_name": "e-pharm",
+  "name": "PHARM-EC",
+  "icons": [
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x190",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

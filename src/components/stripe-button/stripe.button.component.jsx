@@ -18,9 +18,9 @@ return (
     <StripeCheckout
     label='Please Make Payment'
     name='PHARM-EC'
-    email
     billingAddress
     shippingAddress
+    image="images/pharmicon.svg"
     description={`Complete Total $${price}`}
     amount={stripePricing}
     panelLabel= "Make A Payment"

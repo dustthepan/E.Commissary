@@ -3,7 +3,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-bottom: 20px;
 
   .logo-container {
@@ -18,12 +18,8 @@
     }
   }
 
-
-
-
-
-  .options {
-    width: 50%;
+ .options {
+    width: 80%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -32,6 +28,7 @@
     .display-name { 
       font-weight: bold;
       font-size: large;
+      color: slategray;
       
   }
 
