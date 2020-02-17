@@ -247,7 +247,7 @@ const SHOP_DATA = {
       },
       {
         id: 35,
-        name: 'q-Heal Blood Pressure Monitor',
+        name: 'SafeRx Blood Pressure Monitor',
         imageUrl: "/images/shop-img/diagnostic/diag6.png",
         price: 40
       }

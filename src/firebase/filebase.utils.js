@@ -39,23 +39,20 @@ const config = { // SDK from Firebase Docs
     // if there is no user credentials, return back to the function
     if (!userAuth) return; 
 
-    //if it does exist query the user id 
+    //if it does exist query for doc ref object
    const userRef = firestore.doc(`users/${userAuth.uid}`);
    
-   //gets user info 
+   //query the snapchat object -- query
     const snapShot = await userRef.get(); 
    
     //if there is no user data
     if (!snapShot.exists){
-     
-     //create email and display name
-      //at timestamp 
     const {displayName, email} = userAuth
     const createdAt = new Date();
       
     // if there is user data, grab desired properties
     try {
-      await userRef.set({
+      await userRef.set({ //creata  new document with a new object using these properties
         displayName,
         email,
         createdAt,
@@ -66,6 +63,11 @@ const config = { // SDK from Firebase Docs
    }
   }
   return userRef;
+}
+
+export const addPatientDocsAndCollections = (collectionItem, purchasesAdded) => {
+  const collectionRef = firestore.collection(collectionItem);
+  console.log(collectionRef)
 }
 
 export default firebase;

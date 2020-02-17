@@ -4,13 +4,13 @@
   "name": "PHARM-EC",
   "icons": [
     {
-      "src": "apple-touch-icon.png",
-      "sizes": "180x190",
+      "src": "wholelogo.png",
+      "sizes": "668x128",
       "type": "image/x-icon"
     }
   ],
   "start_url": ".",
-  "display": "standalone",
+  "display": "fullscreen",
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }

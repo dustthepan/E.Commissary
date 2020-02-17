@@ -13,8 +13,9 @@ import {Switch, Route, Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {setCurrentUser} from './redux/user/user.actions';
 import {selectCurrentUser} from './redux/user/user.selector';
+import {selectPreview} from './redux/products/products.selector'
 import {createStructuredSelector} from 'reselect'
-import {auth ,createUserProfileDocument} from './firebase/filebase.utils';
+import {auth ,createUserProfileDocument, addPatientDocsAndCollections} from './firebase/filebase.utils';
 //styles
 import './App.css';
 
@@ -32,13 +33,13 @@ class App extends React.Component {
 
   componentDidMount() { // fetching credentials
 
-    const {setCurrentUser} = this.props
+    const {setCurrentUser, collectionsArr} = this.props
 
     this.unsubscribeAuth= auth.onAuthStateChanged( async userAuth => { // authState built in method in firebase
       
       // storing data into firebase database
       if (userAuth) {
-        const userRef = await createUserProfileDocument(userAuth); // checks to see if database has updated at reference (userRef)
+        const userRef = await createUserProfileDocument(userAuth); // user UID passed in userAuth 
           
         userRef.onSnapshot(snapshot => {
             
@@ -53,11 +54,11 @@ class App extends React.Component {
             //null from redux
           })
       } 
-
+      //removed for redux
       //this.setState({currentUser: userAuth})
 
       setCurrentUser(userAuth);
-    
+      addPatientDocsAndCollections('collections',collectionsArr)
   });
 }
 
@@ -89,7 +90,8 @@ class App extends React.Component {
 
 //allows currentUser access as long as the account is signed in
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser, 
+  collectionsArr: selectPreview
 })
 
 const mapDispatchToProps = (dispatch) => ({
