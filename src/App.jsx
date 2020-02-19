@@ -13,9 +13,9 @@ import {Switch, Route, Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {setCurrentUser} from './redux/user/user.actions';
 import {selectCurrentUser} from './redux/user/user.selector';
-import {selectPreview} from './redux/products/products.selector'
+//import {selectPreview} from './redux/products/products.selector'
 import {createStructuredSelector} from 'reselect'
-import {auth ,createUserProfileDocument, addPatientDocsAndCollections} from './firebase/filebase.utils';
+import {auth ,createUserProfileDocument} from './firebase/filebase.utils';
 //styles
 import './App.css';
 
@@ -33,7 +33,7 @@ class App extends React.Component {
 
   componentDidMount() { // fetching credentials
 
-    const {setCurrentUser, collectionsArr} = this.props
+    const {setCurrentUser} = this.props
 
     this.unsubscribeAuth= auth.onAuthStateChanged( async userAuth => { // authState built in method in firebase
       
@@ -57,8 +57,10 @@ class App extends React.Component {
       //removed for redux
       //this.setState({currentUser: userAuth})
 
-      setCurrentUser(userAuth);
-      addPatientDocsAndCollections('collections',collectionsArr)
+      // written to only to program product data into Firebase
+      // setCurrentUser(userAuth);
+      // addPatientDocsAndCollections('collections',collectionsArr.map(({title, items}) => 
+      // ({title,items})))
   });
 }
 
@@ -91,7 +93,7 @@ class App extends React.Component {
 //allows currentUser access as long as the account is signed in
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser, 
-  collectionsArr: selectPreview
+ // collectionsArr: selectPreview 
 })
 
 const mapDispatchToProps = (dispatch) => ({

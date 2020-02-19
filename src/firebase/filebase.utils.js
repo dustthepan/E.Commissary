@@ -65,9 +65,23 @@ const config = { // SDK from Firebase Docs
   return userRef;
 }
 
-export const addPatientDocsAndCollections = (collectionItem, purchasesAdded) => {
+export const addPatientDocsAndCollections = async (collectionItem, purchasesAdded) => {
   const collectionRef = firestore.collection(collectionItem);
   console.log(collectionRef)
+
+  //group all object calls together 
+  //returns a batch object 
+  const firestoreBatch = firestore.batch();
+
+  //iterate through beach item to generate id for products
+  purchasesAdded.forEach(obj => {
+    const itemsId = collectionRef.doc();
+    firestoreBatch.set(itemsId,obj)
+
+    console.log(itemsId)
+  }) 
+
+  await firestoreBatch.commit()
 }
 
 export default firebase;
