@@ -20,18 +20,27 @@ import Products from '../products/products.component';
 //         }
 //     }
 
-const ShopPage = ({match}) => (
+// convert shop page to class component in order to move data into Firebase
+class ShopPage extends React.Component {
 
-    <div className='display'>
-            <Route exact path={`${match.path}`} component={renderInventory} />
-            <Route path ={`${match.path}/:productID`} component ={Products} />
-    </div>
- );
+render() {
+        
+        const {match} = this.props
+        return (
+                <div className='display'>
+                <Route exact path={`${match.path}`} component={renderInventory} />
+                <Route path ={`${match.path}/:productID`} component ={Products} />
+                </div>
+        );    
+}}
+
+    
 
 //removed added to inventory component
 //  const mapStateToProps = createStructuredSelector({
 //      inventory: selectInventory
 //  })
+
 
 
 export default ShopPage;
