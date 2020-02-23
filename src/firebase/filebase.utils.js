@@ -14,16 +14,16 @@ const config = { // SDK from Firebase Docs
 };
 
   firebase.initializeApp(config); // starts firebase
-
-  export const auth = firebase.auth(); // exporting to use with anything with authentication 
-  
-  export const firestore = firebase.firestore(); // exporting to database related functions
   
   //Sign in Google
   const googleP = new firebase.auth.GoogleAuthProvider(); // gives access to Google Auth Class
   googleP.setCustomParameters({prompt:'select_account'}); // use Custom Parameter method always trigger Google pop up when using provider for sign in and auth
   
   export const signInGoogle = () => auth.signInWithPopup(googleP);
+
+  export const auth = firebase.auth(); // exporting to use with anything with authentication 
+  
+export const firestore = firebase.firestore(); // exporting to database related functionss
 
   //Sign In Facebook
   // const facebookP = new firebase.auth.FacebookAuthProvider();
@@ -81,7 +81,24 @@ export const addPatientDocsAndCollections = async (collectionItem, purchasesAdde
     console.log(itemsId)
   }) 
 
-  await firestoreBatch.commit()
+  await firestoreBatch.commit();
 }
+
+//create object for products
+export const collectionstoObjects = (collections) => {
+  const convertObject = collections.docs.map( doc => {
+    const {title,items} = doc.data();
+    
+    return {
+      routeName: encodeURI(title.toLowerCase()),
+      id:doc.id,
+      title,
+      items
+    }
+  })
+ // console.log(convertObject)
+}
+
+
 
 export default firebase;

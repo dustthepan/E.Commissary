@@ -1,6 +1,4 @@
 import React from 'react';
-
-//pages
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component.jsx';
 import Sign from './pages/sign/sign.component';
