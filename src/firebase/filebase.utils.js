@@ -90,7 +90,7 @@ export const collectionstoObjects = (collections) => {
     const {title,items} = doc.data();
     
     return {
-      routeName: encodeURI(title.toLowerCase()),
+      routeName: encodeURI(title.toLowerCase()), // handle URL route data type
       id:doc.id,
       title,
       items
