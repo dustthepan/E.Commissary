@@ -26,7 +26,7 @@ export default function Browse() {
       <ShopTwoIcon
         color="primary"
         fontSize="large"
-        style={{fontSize: 53}}
+        style={{fontSize: 50}}
         component={svgProps => {
           return (
             <svg {...svgProps}>
