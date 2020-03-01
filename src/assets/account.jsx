@@ -1,12 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { blue, green } from '@material-ui/core/colors';
-import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import PersonIcon from '@material-ui/icons/Person';
 
 const useStyles = makeStyles(theme => ({
   root: {
     '& > svg': {
-      margin: theme.spacing(2),
+      margin: theme.spacing(.1),
     },
   },
   iconHover: {
@@ -22,7 +22,7 @@ export default function LogIn () {
 
   return (
     <div className={account.root}>
-      <AccountBoxIcon
+      <PersonIcon
         color="primary"
         fontSize="large"
         style={{fontSize:50}}

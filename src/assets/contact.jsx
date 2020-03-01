@@ -7,7 +7,7 @@ import {green,blue} from '@material-ui/core/colors';
 const useStyles = makeStyles(theme => ({
   root: {
     '& > svg': {
-      margin: theme.spacing(-2.5),
+      margin: theme.spacing(-2.25),
     },
   },
   iconHover: {
@@ -26,7 +26,7 @@ export default function Contact() {
       <ContactSupportIcon
         color="primary"
         fontSize="large"
-        style={{fontSize: 53}}
+        style={{fontSize: 50}}
         component={svgProps => {
           return (
             <svg {...svgProps}>
